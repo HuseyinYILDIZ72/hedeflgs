@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LGS Ders Notları</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>LGS Ders Notları</h1>
+    </header>
+    <main id="main-content">
+        <section id="login-section" class="animated-section">
+            <h2>Giriş Yap</h2>
+            <form id="login-form">
+                <label for="login-username">Kullanıcı Adı:</label>
+                <input type="text" id="login-username" name="username" required>
+                <label for="login-password">Şifre:</label>
+                <input type="password" id="login-password" name="password" required>
+                <button type="submit">Giriş Yap</button>
+            </form>
+            <p>Hesabınız yok mu? <a href="#" id="show-register">Kayıt Ol</a></p>
+        </section>
+        <section id="register-section" class="animated-section" style="display: none;">
+            <h2>Kayıt Ol</h2>
+            <form id="register-form">
+                <label for="register-username">Kullanıcı Adı:</label>
+                <input type="text" id="register-username" name="username" required>
+                <label for="register-password">Şifre:</label>
+                <input type="password" id="register-password" name="password" required>
+                <button type="submit">Kayıt Ol</button>
+            </form>
+            <p>Zaten hesabınız var mı? <a href="#" id="show-login">Giriş Yap</a></p>
+        </section>
+        <section id="admin-section" class="animated-section" style="display: none;">
+            <h2>Admin Paneli</h2>
+            <form id="note-form">
+                <label for="note-type">İçerik Türü:</label>
+                <input type="text" id="note-type" name="type" required>
+                <label for="note-content">İçerik:</label>
+                <textarea id="note-content" name="content" required></textarea>
+                <label for="note-course">Ders:</label>
+                <select id="note-course" name="course" required>
+                    <option value="Türkçe">Türkçe</option>
+                    <option value="Matematik">Matematik</option>
+                    <option value="Fen Bilimleri">Fen Bilimleri</option>
+                    <option value="T.C. İnkılap Tarihi ve Atatürkçülük">T.C. İnkılap Tarihi ve Atatürkçülük</option>
+                    <option value="Yabancı Dil">Yabancı Dil</option>
+                    <option value="Din Kültürü ve Ahlâk Bilgisi">Din Kültürü ve Ahlâk Bilgisi</option>
+                </select>
+                <button type="submit">Ders Notu Ekle</button>
+            </form>
+            <h3>Kullanıcılar</h3>
+            <ul id="user-list"></ul>
+            <h3>Ders Notları</h3>
+            <select id="admin-course-select">
+                <option value="Türkçe">Türkçe</option>
+                <option value="Matematik">Matematik</option>
+                <option value="Fen Bilimleri">Fen Bilimleri</option>
+                <option value="T.C. İnkılap Tarihi ve Atatürkçülük">T.C. İnkılap Tarihi ve Atatürkçülük</option>
+                <option value="Yabancı Dil">Yabancı Dil</option>
+                <option value="Din Kültürü ve Ahlâk Bilgisi">Din Kültürü ve Ahlâk Bilgisi</option>
+            </select>
+            <ul id="note-list"></ul>
+        </section>
+        <section id="user-section" class="animated-section" style="display: none;">
+            <h2>Ders Notları</h2>
+            <select id="user-course-select">
+                <option value="Türkçe">Türkçe</option>
+                <option value="Matematik">Matematik</option>
+                <option value="Fen Bilimleri">Fen Bilimleri</option>
+                <option value="T.C. İnkılap Tarihi ve Atatürkçülük">T.C. İnkılap Tarihi ve Atatürkçülük</option>
+                <option value="Yabancı Dil">Yabancı Dil</option>
+                <option value="Din Kültürü ve Ahlâk Bilgisi">Din Kültürü ve Ahlâk Bilgisi</option>
+            </select>
+            <ul id="user-note-list"></ul>
+        </section>
+    </main>
+    <footer>
+        <p>Bu site Hüseyin Yıldız tarafından yapılmıştır.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
